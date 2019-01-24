@@ -7,7 +7,6 @@ import org.junit.Test;
 public class MarkovWordTest {
 
 	String[] when2SimpleWords = new String[] {"parapluie", "parachute"};
-	
 	@Test
 	public void getSimilarity_2SimpleWords_26() {
 		
@@ -24,6 +23,7 @@ public class MarkovWordTest {
 		double expected = 1.0;
 		double actual = m.getSimilarity(when2SimpleWords[0],when2SimpleWords[0], 4);
 		assertEquals(expected, actual,0.000000001);		
-	}	
+	}
+	
 
 }

@@ -11,9 +11,13 @@ public class MarkovWord {
 
 	}
 
+	public MarkovWord(String dataword, int n) {
+		data = (ArrayList<MarkovData>)processString(dataword, n);
+	}
+	
 	public double getSimilarity(String wordOne, String wordTwo, int n) {
 		List<MarkovData> res1 = processString(wordOne, n);
-		// displayResult(res1);
+		 //displayResult(res1);
 		List<MarkovData> res2 = processString(wordTwo, n);
 		// displayResult(res2);
 		int c = common(res1, res2);
@@ -32,7 +36,6 @@ public class MarkovWord {
 					res++;
 			}
 		}
-
 		return res;
 	}
 
